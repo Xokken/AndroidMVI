@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.CalcFragment">
+
+    <EditText
+        android:id="@+id/etFirst"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/first"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconPlus"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintEnd_toStartOf="@+id/etSecond"
+        app:layout_constraintStart_toEndOf="@+id/etFirst"
+        app:layout_constraintTop_toTopOf="@+id/etFirst"/>
+
+    <EditText
+        android:id="@+id/etSecond"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/second"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconResult"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivIconPlus" />
+
+    <EditText
+        android:id="@+id/etThird"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="@string/third"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivIconResult" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etThird" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
